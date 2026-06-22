@@ -1,37 +1,21 @@
 ---
-title: Academic Project Page Template
+title: OmniBody: Discretized Local Constraints for Real-Time Destructible and Flexible Soft Bodies Simulation
 authors:
-  - name: Roman Hauksson
-    url: https://roman.technology
-    institution: University of Texas at Dallas
-    notes: ["*", †]
-  - name: Author Two
-    institution: Institution Two
-    notes: ["*", †]
-  - name: Author Three
-    institution: Institution Three
+  - name: Jewoo Shin
     notes: ["*"]
-  - name: Author Four
-    institution: Institution Four
-conference: Conference Name
+  - name: Jinah Park
+    notes: ["*"]
+conference: SIGGRAPH 2026 Posters
 notes:
   - symbol: "*"
-    text: author note one
-  - symbol: †
-    text: author note two
+    text: Korea Advanced Institute of Science and Technology
 links:
   - name: Paper
     url: https://github.com/RomanHauksson/academic-project-astro-template
     icon: ri:file-pdf-2-line
-  - name: Code
-    url: https://github.com/RomanHauksson/academic-project-astro-template
-    icon: ri:github-line
   - name: arXiv
     url: https://github.com/RomanHauksson/academic-project-astro-template
     icon: academicons:arxiv
-  - name: Slides
-    url: https://github.com/RomanHauksson/academic-project-astro-template
-    icon: ri:slideshow-2-line
 
 # The color theme of the page. Defaults to "device" (the preference set in the user's brower or operating system). Setting this to "light" or "dark" will override the user's preference. This is useful if your figures only look good in one theme.
 theme: device
@@ -40,7 +24,7 @@ theme: device
 favicon: favicon.svg
 
 # These keys are optional. If a link to your project page is in a Google search result, text message, or social media post, it will often appear as a "link preview card" based on its title, description, favicon, and thumbnail. After you publish your page, you can double check that these previews look right using [this tool](https://linkpreview.xyz/)
-description: Simple project page template for your research paper, built with Astro and Tailwind
+description: OmniBody Project Page
 thumbnail: screenshot-light.png
 ---
 
@@ -69,7 +53,7 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 ## Abstract
 
-This is a template you can use to create a professional project page for your research paper. [See the code for the template and instructions on how to use it yourself on GitHub](https://github.com/RomanHauksson/academic-project-astro-template). It's made with the [Astro web framework](https://astro.build/) and styled with [Tailwind](https://tailwindcss.com/). You write the content in [MDX](https://mdxjs.com/), which enables markdown formatting like **bold**, _italics_, and ~strikethrough~, as well as custom components like <SmallCaps>small caps.</SmallCaps>
+We present OmniBody, a real-time soft-body simulation framework that achieves global deformation through purely local, voxel aligned oriented ellipsoidal particle interactions. A suite of decoupled constraints — contact, bending, anisotropic elasticity, volume preservation, and distance-based fracture — operates over a six neighbor structure, enabling GPU parallelization without global solvers or remeshing.
 
 </HighlightedSection>
 
