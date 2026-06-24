@@ -43,17 +43,18 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/
 import { Comparison } from "./components/Comparison.tsx";
 
 import peeling from "./assets/Peeling.mp4";
-import Poisson from "./assets/poisson.png";
+import poisson_no from "./assets/poisson_no.png";
+import poisson_yes from "./assets/poisson_yes.png";
+import ellipsoid from "./assets/ellipsoid.png";
+import cloth from "./assets/cloth_wringing.mp4";
+import cow from "./assets/Cuttingjelly.mp4";
+import cube from "./assets/cube_stretch.mp4";
 
 import dogsDiffc from "./assets/dogs-diffc.png"
 import dogsTrue from "./assets/dogs-true.png"
 import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
-<Figure>
-  <Video src={peeling}></Video>
-  <Fragment slot="caption">Peeling an elastic cube with 1,000 particles.</Fragment>
-</Figure>
-
+<Video src={peeling} autoplay="true"></Video>
 
 <HighlightedSection>
 
@@ -65,14 +66,36 @@ We present OmniBody, a real-time soft-body simulation framework that achieves gl
 
 ## Methods
 
-## Results
+<Figure>
+  <Picture slot="figure" src={ellipsoid} alt="Photo of oriented ellipsoid representation" />
+  <Fragment slot="caption">Representation of oriented ellipsoid particle and local connection constraints.</Fragment>
+</Figure>
+
+
+
+## Gallery
+
+<Carousel>
+  <CarouselSlide>
+    <Video src={cloth}/>
+    <figcaption class="text-center">Caption</figcaption>
+  </CarouselSlide>
+  <CarouselSlide>
+    <Video src={cube}/>
+    <figcaption class="text-center">Caption</figcaption>
+  </CarouselSlide>
+  <CarouselSlide>
+    <Video src={cow}/>
+    <figcaption class="text-center">Caption</figcaption>
+  </CarouselSlide>
+</Carousel>
 
 ### Volume Preservation
 
-<Figure>
-  <Picture slot="figure" src={Poisson} alt="Poisson" />
-  <Fragment slot="caption">Caption</Fragment>
-</Figure>
+<Comparison client:idle >
+  <Picture slot="itemOne" src={poisson_no} alt="" />
+  <Picture slot="itemTwo" src={poisson_yes} alt="" />
+</Comparison>
 
 ## BibTeX citation
 

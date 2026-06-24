@@ -101,6 +101,19 @@ const slidesHtml = children.map((child) => child.outerHTML).join("");
       });
     }
 
+    function updateVideoPlayback(){
+      slideViewports.forEach((slideViewport, index) => {
+        const video = slideViewport.querySelector("video") as HTMLVideoElement | null;
+        if (!video) return;
+        if (index === currentIndex) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }
+
     function goToSlide(index: number) {
       if (index < 0 || index >= slides.length) {
         return;
@@ -129,6 +142,7 @@ const slidesHtml = children.map((child) => child.outerHTML).join("");
     });
 
     updateButtonStates();
+    updateVideoPlayback();
 
     if (slideViewports.length === 0) {
       return;
@@ -153,6 +167,7 @@ const slidesHtml = children.map((child) => child.outerHTML).join("");
 
         currentIndex = nextIndex;
         updateButtonStates();
+        updateVideoPlayback();
       },
       {
         root: carouselViewport,
