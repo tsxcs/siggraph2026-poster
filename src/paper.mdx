@@ -47,6 +47,7 @@ import poisson_no from "./assets/poisson_no.png";
 import poisson_yes from "./assets/poisson_yes.png";
 import ellipsoid from "./assets/ellipsoid.png";
 import cloth from "./assets/cloth_wringing.mp4";
+import cloth2 from "./assets/cloth_penetrate.mp4";
 import cow from "./assets/Cuttingjelly.mp4";
 import cube from "./assets/cube_stretch.mp4";
 
@@ -78,15 +79,19 @@ We present OmniBody, a real-time soft-body simulation framework that achieves gl
 <Carousel>
   <CarouselSlide>
     <Video src={cloth}/>
-    <figcaption class="text-center">Caption</figcaption>
+    <figcaption class="text-center">Wringing a cloth with 800 particles.</figcaption>
   </CarouselSlide>
   <CarouselSlide>
     <Video src={cube}/>
-    <figcaption class="text-center">Caption</figcaption>
+    <figcaption class="text-center">Cutting a stretched cube with 64,000 particles.</figcaption>
   </CarouselSlide>
   <CarouselSlide>
     <Video src={cow}/>
-    <figcaption class="text-center">Caption</figcaption>
+    <figcaption class="text-center">Playing with a cow shaped jelly.</figcaption>
+  </CarouselSlide>
+  <CarouselSlide>
+    <Video src={cloth2}/>
+    <figcaption class="text-center">Penetrating a cloth with 40,000 particles.</figcaption>
   </CarouselSlide>
 </Carousel>
 
@@ -96,6 +101,9 @@ We present OmniBody, a real-time soft-body simulation framework that achieves gl
   <Picture slot="itemOne" src={poisson_no} alt="" />
   <Picture slot="itemTwo" src={poisson_yes} alt="" />
 </Comparison>
+
+A vertically stretched cube with (right) and without (left) the volume 
+preservation constraint, demonstrating Poisson-like lateral contraction.
 
 ## BibTeX citation
 
